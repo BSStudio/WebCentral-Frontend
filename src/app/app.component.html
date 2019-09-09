@@ -1,12 +1,32 @@
 <mat-drawer-container class="container" autosize>
-  <mat-drawer #drawer class="sidenav">
-    <p>Menu</p>
-  </mat-drawer>
   <div class="sidenav-content">
-    <button mat-icon-button (click)="drawer.toggle()">
-      <mat-icon>account-circle</mat-icon>
-    </button>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span> B S S </span>
+
+        <button mat-button routerLink="/videos">Videók</button>
+        <button mat-button routerLink="/courses">Tanfolyamok</button>
+        <button mat-button routerLink="/profiles">Tagok</button>
+        <button mat-button routerLink="/about">Rólunk</button>
+        
+        <span class="spacer"></span>
+        
+        <input matInput placeholder="Search">
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
   </div>
+  <mat-drawer #drawer class="sidenav" position="end">
+      <img class="round" src="https://via.placeholder.com/125">
+      <h4 class="text">Példa Béla Hosszú Nevű</h4>
+      <button color="primary" mat-button>Profilom</button>
+      <button color="primary" mat-button>Adások</button>
+      <button color="primary" mat-button>Projektek</button>
+      <button color="primary" mat-button>BSS Wiki</button>
+      <button color="primary" mat-button>Kijelentkezés</button>
+  </mat-drawer>
 </mat-drawer-container>
 
-<router-outlet></router-outlet>
