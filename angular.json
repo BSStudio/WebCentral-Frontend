@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WebCentral-Frontend": {
+    "webcentral-frontend": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/WebCentral-Frontend",
+            "outputPath": "dist/webcentral-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,18 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/open-iconic/font/css/open-iconic-bootstrap.css",
-              "node_modules/plyr/dist/plyr.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/popper.js/dist/umd/popper.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/plyr/dist/plyr.js",
-              "src/scripts.js"
-            ],
+            "scripts": [],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -67,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WebCentral-Frontend:build"
+            "browserTarget": "webcentral-frontend:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "WebCentral-Frontend:build:production"
+              "browserTarget": "webcentral-frontend:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WebCentral-Frontend:build"
+            "browserTarget": "webcentral-frontend:build"
           }
         },
         "test": {
@@ -112,7 +103,7 @@
         }
       }
     },
-    "WebCentral-Frontend-e2e": {
+    "webcentral-frontend-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -121,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WebCentral-Frontend:serve"
+            "devServerTarget": "webcentral-frontend:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WebCentral-Frontend:serve:production"
+              "devServerTarget": "webcentral-frontend:serve:production"
             }
           }
         },
@@ -141,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "WebCentral-Frontend"
+  "defaultProject": "webcentral-frontend"
 }
