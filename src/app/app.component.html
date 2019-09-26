@@ -1,25 +1,28 @@
-<mat-drawer-container class="container" autosize>
-  <div class="sidenav-content">
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <span> B S S </span>
+<router-outlet></router-outlet>
 
-        <button mat-button routerLink="/videos">Videók</button>
-        <button mat-button routerLink="/courses">Tanfolyamok</button>
-        <button mat-button routerLink="/profiles">Tagok</button>
-        <button mat-button routerLink="/about">Rólunk</button>
-        
-        <span class="spacer"></span>
-        
-        <input matInput placeholder="Search">
-        <button mat-icon-button (click)="drawer.toggle()">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-      </mat-toolbar-row>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
-  </div>
-  <mat-drawer #drawer class="sidenav" position="end">
+<!--
+<mat-drawer-container class="flex-container" fxLayout="column">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="logo" routerLink="/"> B S S </span>
+
+      <button mat-button routerLink="/videos">Videók</button>
+      <button mat-button routerLink="/courses">Tanfolyamok</button>
+      <button mat-button routerLink="/profiles">Tagok</button>
+      <button mat-button routerLink="/about">Rólunk</button>
+      
+      <span class="spacer"></span>
+      
+      <input matInput placeholder="Search">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+  <mat-drawer #drawer position="end">
       <img class="round" src="https://via.placeholder.com/125">
       <h4 class="text">Példa Béla Hosszú Nevű</h4>
       <button color="primary" mat-button>Profilom</button>
@@ -29,4 +32,5 @@
       <button color="primary" mat-button>Kijelentkezés</button>
   </mat-drawer>
 </mat-drawer-container>
+-->
 

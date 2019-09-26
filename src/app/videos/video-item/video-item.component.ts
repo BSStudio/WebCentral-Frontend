@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-video-item',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoItemComponent implements OnInit {
 
+  @Input() video: VideoItem
+
   constructor() { }
 
   ngOnInit() {
   }
 
+}
+
+export interface VideoItem {
+  title: string;
+  snapshotUrl: string;
 }

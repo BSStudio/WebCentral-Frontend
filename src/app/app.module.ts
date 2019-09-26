@@ -11,6 +11,7 @@ import { MatIconModule} from '@angular/material/icon';
 import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Routing
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +32,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatIconModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
