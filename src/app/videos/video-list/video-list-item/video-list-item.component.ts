@@ -1,12 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-video-item',
-  templateUrl: './video-item.component.html',
-  styleUrls: ['./video-item.component.css']
+  selector: 'app-video-list-item',
+  templateUrl: './video-list-item.component.html',
+  styleUrls: ['./video-list-item.component.css']
 })
-export class VideoItemComponent implements OnInit {
-
+export class VideoListItemComponent implements OnInit {
   @Input() video: VideoItem
 
   constructor() { }
@@ -17,6 +16,7 @@ export class VideoItemComponent implements OnInit {
 }
 
 export interface VideoItem {
+  id: any;
   title: string;
   snapshotUrl: string;
 }

@@ -2,38 +2,38 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-// Material
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule} from '@angular/material/button';
-import { MatIconModule} from '@angular/material/icon';
-import { MatSidenavModule} from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
-// Routing
 import { AppRoutingModule } from './app-routing.module';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { 
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+  MatToolbarModule,
+  MatSidenavModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
 
     // Material
-    BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatToolbarModule,
+    MatCardModule,
     MatFormFieldModule,
-    FlexLayoutModule
+    MatIconModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

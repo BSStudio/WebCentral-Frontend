@@ -1,0 +1,21 @@
+.mat-card {
+    margin: 5px 0;
+    padding-bottom: 0px;
+}
+
+.mat-card .video-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mat-card .mat-card-title{
+    height: 50px;
+}
+
+.mat-card .title {
+    font-size: 14px;
+}
+
+.mat-card .img {
+    width: 100%;
+}

@@ -3,20 +3,24 @@ import { CommonModule } from '@angular/common';
 
 import { VideosRoutingModule } from './videos-routing.module';
 import { VideoListComponent } from './video-list/video-list.component';
-import { VideoItemComponent } from './video-item/video-item.component';
+import { VideoListItemComponent } from './video-list/video-list-item/video-list-item.component';
 
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon'
+import { FlexLayoutModule } from '@angular/flex-layout'
+import { MatCardModule, MatIconModule, MatSidenavModule } from '@angular/material';
+import { VideoDetailsComponent } from './video-details/video-details.component';
 
 @NgModule({
-  declarations: [VideoListComponent, VideoItemComponent],
+  declarations: [VideoListComponent, VideoListItemComponent, VideoDetailsComponent],
   imports: [
     CommonModule,
     VideosRoutingModule,
 
+    FlexLayoutModule,
+
     // Material
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule
   ]
 })
 export class VideosModule { }

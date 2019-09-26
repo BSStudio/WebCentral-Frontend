@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to webcentral-frontend!');
+    expect(page.getTitleText()).toEqual('WebCentral-Frontend app is running!');
   });
 
   afterEach(async () => {

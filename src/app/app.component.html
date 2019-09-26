@@ -1,7 +1,5 @@
-<router-outlet></router-outlet>
 
-<!--
-<mat-drawer-container class="flex-container" fxLayout="column">
+<mat-drawer-container class="flex-container">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <span class="logo" routerLink="/"> B S S </span>
@@ -13,7 +11,10 @@
       
       <span class="spacer"></span>
       
-      <input matInput placeholder="Search">
+      <mat-form-field class="search-form">
+        <input matInput placeholder="Search Picture" type="text">
+      </mat-form-field>
+      <button button="submit" mat-raised-button color="primary">Search</button>
       <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>more_vert</mat-icon>
       </button>
@@ -32,5 +33,3 @@
       <button color="primary" mat-button>Kijelentkezés</button>
   </mat-drawer>
 </mat-drawer-container>
--->
-
