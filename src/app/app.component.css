@@ -22,6 +22,14 @@
     text-align: center;
 }
 
+.mat-toolbar .mat-form-field{
+    padding-top: 12px;
+}
+
+.mat-toolbar .search-form{
+    font-size: 12px;
+}
+
 .mat-drawer {
     min-width: 225px;
 }
@@ -34,6 +42,10 @@
 
 .mat-drawer .text {
     text-align: center;
+}
+
+.mat-drawer .mat-button {
+    text-align: left;
 }
 
 .mat-drawer button {

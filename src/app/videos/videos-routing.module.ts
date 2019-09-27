@@ -6,12 +6,12 @@ import { VideoDetailsComponent } from './video-details/video-details.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component:VideoListComponent
+    path: '',
+    component: VideoListComponent
   },
   {
-    path:':id',
-    component:VideoDetailsComponent
+    path: ':id',
+    component: VideoDetailsComponent
   }
 ];
 

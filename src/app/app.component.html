@@ -4,7 +4,7 @@
     <mat-toolbar-row>
       <span class="logo" routerLink="/"> B S S </span>
 
-      <button mat-button routerLink="/videos">Videók</button>
+      <button mat-button routerLink="/videos">Médiatár</button>
       <button mat-button routerLink="/courses">Tanfolyamok</button>
       <button mat-button routerLink="/profiles">Tagok</button>
       <button mat-button routerLink="/about">Rólunk</button>
@@ -12,9 +12,9 @@
       <span class="spacer"></span>
       
       <mat-form-field class="search-form">
-        <input matInput placeholder="Search Picture" type="text">
+        <input matInput placeholder="Videó keresése" type="text">
       </mat-form-field>
-      <button button="submit" mat-raised-button color="primary">Search</button>
+      <button button="submit" mat-raised-button color="primary">Keresés</button>
       <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>more_vert</mat-icon>
       </button>
@@ -26,10 +26,45 @@
   <mat-drawer #drawer position="end">
       <img class="round" src="https://via.placeholder.com/125">
       <h4 class="text">Példa Béla Hosszú Nevű</h4>
-      <button color="primary" mat-button>Profilom</button>
-      <button color="primary" mat-button>Adások</button>
-      <button color="primary" mat-button>Projektek</button>
-      <button color="primary" mat-button>BSS Wiki</button>
-      <button color="primary" mat-button>Kijelentkezés</button>
+      <button color="primary" mat-button>
+        <mat-icon>account_box</mat-icon>
+        Profilom
+      </button>
+      <button color="primary" mat-button>
+        <mat-icon>videocam</mat-icon>
+        Adás menedzser
+      </button>
+      <button color="primary" mat-button>
+        <mat-icon>assignment</mat-icon>
+        Projekt menedzser
+      </button>
+      <button color="primary" mat-button>
+        <mat-icon>email</mat-icon>
+        Hírlevelek
+      </button>
+      <button color="primary" mat-button>
+        <mat-icon>notifications</mat-icon>
+        Értesítés kezelő
+      </button>
+      <button color="primary" mat-button>
+        <mat-icon>star</mat-icon>
+        Kiemelés kezelő
+      </button>
+      <button color="primary" mat-button>
+        <mat-icon>group</mat-icon>
+        Tanfolyam portál
+      </button>
+      <button color="primary" mat-button>
+        <mat-icon>book</mat-icon>
+        BSS Wiki
+      </button>
+      <button color="primary" mat-button>
+        <mat-icon>assessment</mat-icon>
+        Statisztikák
+      </button>
+      <button color="primary" mat-button>
+        <mat-icon>exit_to_app</mat-icon>
+        Kijelentkezés
+      </button>
   </mat-drawer>
 </mat-drawer-container>

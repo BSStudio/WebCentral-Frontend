@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./video-list-item.component.css']
 })
 export class VideoListItemComponent implements OnInit {
-  @Input() video: VideoItem
+  @Input() video: VideoItem;
 
   constructor() { }
 
@@ -18,5 +18,6 @@ export class VideoListItemComponent implements OnInit {
 export interface VideoItem {
   id: any;
   title: string;
+  type: string;
   snapshotUrl: string;
 }

@@ -1,9 +1,21 @@
-<mat-card fxFlex="90%" fxFlex.gt-xs="0 1 250px" class="card-picture">
+<mat-card fxFlex="90%" fxFlex.gt-xs="0 1 320px" class="card-picture">
     <a class="video-link" routerLink="{{video.id}}">
-        <mat-card-title>
-            <div class="title">{{video.title}}</div>
+        <mat-card-title fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="90%" class="title">{{video.title}}</div>
+
+            <mat-icon fxFlex="10%" *ngIf="video.type=='public'">public</mat-icon>
+            <mat-icon fxFlex="10%" *ngIf="video.type=='private'">lock</mat-icon>
+            <mat-icon fxFlex="10%" *ngIf="video.type=='draft'">insert_drive_file</mat-icon>
         </mat-card-title>
-        
+
         <img mat-card-image src="{{video.snapshotUrl}}">
+
+        <mat-card-footer fxLayout="row" fxLayoutAlign="end end">
+            <mat-chip-list fxLayout="row" fxLayoutAlign="end end">
+                <mat-chip color="primary" selected>Schönherz</mat-chip>
+                <mat-chip color="primary" selected>Közélet</mat-chip>
+                <mat-chip color="primary" selected>Bulika</mat-chip>
+            </mat-chip-list>
+        </mat-card-footer>
     </a>
 </mat-card>
