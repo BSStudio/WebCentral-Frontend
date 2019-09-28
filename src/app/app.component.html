@@ -29,7 +29,7 @@
 
   <mat-drawer #drawer position="end">
 
-      <ng-container *ngIf="false">
+      <ng-container *ngIf="!isLoggedIn">
         <form class="login-form">
           <mat-form-field appearance="standard">
             <mat-label>Felhasználónév</mat-label>
@@ -46,7 +46,7 @@
         </form>
       </ng-container>
       
-      <ng-container *ngIf="true">
+      <ng-container *ngIf="isLoggedIn">
           <img class="round" src="https://via.placeholder.com/125">
           <h4 class="text">Példa Béla Hosszú Nevű</h4>
           <button color="primary" mat-button>
@@ -61,19 +61,19 @@
             <mat-icon>assignment</mat-icon>
             Projekt menedzser
           </button>
-          <button color="primary" mat-button>
+          <button *ngIf="isAdmin" color="primary" mat-button>
             <mat-icon>email</mat-icon>
             Hírlevelek
           </button>
-          <button color="primary" mat-button>
+          <button *ngIf="isAdmin" color="primary" mat-button>
             <mat-icon>notifications</mat-icon>
             Értesítés kezelő
           </button>
-          <button color="primary" mat-button>
+          <button *ngIf="isAdmin" color="primary" mat-button>
             <mat-icon>star</mat-icon>
             Kiemelés kezelő
           </button>
-          <button color="primary" mat-button>
+          <button *ngIf="isAdmin" color="primary" mat-button>
             <mat-icon>group</mat-icon>
             Tanfolyam portál
           </button>
@@ -81,7 +81,7 @@
             <mat-icon>book</mat-icon>
             BSS Wiki
           </button>
-          <button color="primary" mat-button>
+          <button *ngIf="isAdmin" color="primary" mat-button>
             <mat-icon>assessment</mat-icon>
             Statisztikák
           </button>

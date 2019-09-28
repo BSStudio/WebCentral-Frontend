@@ -2,10 +2,12 @@
     <a class="video-link" routerLink="{{video.id}}">
         <mat-card-title fxLayout="row" fxLayoutAlign="start center">
             <div fxFlex="90%" class="title">{{video.title}}</div>
-
-            <mat-icon fxFlex="10%" *ngIf="video.type=='public'">public</mat-icon>
-            <mat-icon fxFlex="10%" *ngIf="video.type=='private'">lock</mat-icon>
-            <mat-icon fxFlex="10%" *ngIf="video.type=='draft'">insert_drive_file</mat-icon>
+            
+            <ng-container *ngIf="isLoggedIn">
+                <mat-icon fxFlex="10%" *ngIf="video.type=='public'">public</mat-icon>
+                <mat-icon fxFlex="10%" *ngIf="video.type=='private'">lock</mat-icon>
+                <mat-icon fxFlex="10%" *ngIf="video.type=='draft'">insert_drive_file</mat-icon>
+            </ng-container>
         </mat-card-title>
 
         <img mat-card-image src="{{video.snapshotUrl}}">
