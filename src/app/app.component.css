@@ -6,6 +6,10 @@
     right: 0;
 }
 
+.mat-toolbar {
+    background-color: #005BAA;
+}
+
 .mat-toolbar .mat-toolbar-row {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -23,8 +27,8 @@
     width: 0px;
     height: 0px;
     border-left:25px solid #ddd; 
-    border-top:25px solid rgb(63, 81, 181); 
-    border-bottom:25px solid rgb(63, 81, 181); 
+    border-top:25px solid #005BAA; 
+    border-bottom:25px solid #005BAA; 
 }
 
 .mat-toolbar .mat-toolbar-row .mat-button {

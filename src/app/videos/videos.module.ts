@@ -8,9 +8,10 @@ import { VideoListItemComponent } from './video-list/video-list-item/video-list-
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule, MatIconModule, MatSidenavModule, MatTabsModule, MatChipsModule } from '@angular/material';
 import { VideoDetailsComponent } from './video-details/video-details.component';
+import { RelatedListItemComponent } from './video-details/related-list-item/related-list-item.component';
 
 @NgModule({
-  declarations: [VideoListComponent, VideoListItemComponent, VideoDetailsComponent],
+  declarations: [VideoListComponent, VideoListItemComponent, VideoDetailsComponent, RelatedListItemComponent],
   imports: [
     CommonModule,
     VideosRoutingModule,

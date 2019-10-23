@@ -1,7 +1,7 @@
 <mat-card fxFlex="90%" fxFlex.gt-xs="0 1 320px" class="card-picture">
     <a class="video-link" routerLink="{{video.id}}">
         <mat-card-title fxLayout="row" fxLayoutAlign="start center">
-            <div fxFlex="90%" class="title">{{video.title}}</div>
+            <div fxFlex="{(isLoggedIn): '90%' : '100%'}" class="title">{{video.title}}</div>
             
             <ng-container *ngIf="isLoggedIn">
                 <mat-icon fxFlex="10%" *ngIf="video.type=='public'">public</mat-icon>
