@@ -1,14 +1,13 @@
 
 <mat-drawer-container class="flex-container">
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span class="logo" routerLink="/"><img src="/assets/img/bss_logo.png"></span>
-      <span class="logo-triangle"></span>
+  <mat-toolbar color="primary" fxLayout.lt-sm="column">
+      <span class="logo" fxFlex.lt-sm="100%" routerLink="/"><img src="/assets/img/bss_logo.png"></span>
+      <span class="logo-triangle" fxHide.lt-sm="true"></span>
 
-      <button mat-button routerLink="/videos">Médiatár</button>
-      <button mat-button routerLink="/courses">Tanfolyamok</button>
-      <button mat-button routerLink="/profiles">Tagok</button>
-      <button mat-button routerLink="/about">Rólunk</button>
+      <button mat-button fxFlex.lt-sm="100%" fxFlex="100px 0 100px" routerLink="/videos">Médiatár</button>
+      <button mat-button fxFlex.lt-sm="100%" fxFlex="100px 0 100px" routerLink="/courses">Tanfolyamok</button>
+      <button mat-button fxFlex.lt-sm="100%" fxFlex="100px 0 100px" routerLink="/profiles">Tagok</button>
+      <button mat-button fxFlex.lt-sm="100%" fxFlex="100px 0 100px" routerLink="/about">Rólunk</button>
       
       <span class="spacer"></span>
       
@@ -22,7 +21,6 @@
       <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>more_vert</mat-icon>
       </button>
-    </mat-toolbar-row>
   </mat-toolbar>
 
   <router-outlet></router-outlet>

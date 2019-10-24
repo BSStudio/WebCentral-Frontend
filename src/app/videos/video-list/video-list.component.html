@@ -1,6 +1,6 @@
 
 <mat-tab-group>
-    <mat-tab label="Videók">
+    <mat-tab id="mat-tab-label" label="Videók">
         <div class="video-list" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
             <app-video-list-item *ngFor="let video of pictures" [video]="video" ></app-video-list-item>
         </div>
