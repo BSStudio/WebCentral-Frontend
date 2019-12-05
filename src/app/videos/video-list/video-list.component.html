@@ -1,0 +1,26 @@
+
+<mat-tab-group>
+    <mat-tab id="mat-tab-label" label="Videók">
+        <div class="video-list" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
+            <app-video-list-item *ngFor="let video of pictures" [video]="video" ></app-video-list-item>
+        </div>
+    </mat-tab>
+    <mat-tab label="Közvetítések">
+        <div class="video-list" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
+            <app-video-list-item *ngFor="let video of pictures" [video]="video" ></app-video-list-item>
+        </div>
+    </mat-tab>
+    <mat-tab label="Műsorok">
+        <div class="video-list" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
+            <app-video-list-item *ngFor="let video of pictures" [video]="video" ></app-video-list-item>
+        </div>
+    </mat-tab>
+    <mat-tab label="Archivum">
+        <div class="video-list" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
+            <app-video-list-item *ngFor="let video of pictures" [video]="video" ></app-video-list-item>
+        </div>
+    </mat-tab>
+    <mat-tab label="Részletes kereső">
+        <p>Kereső felület</p>
+    </mat-tab>
+</mat-tab-group>

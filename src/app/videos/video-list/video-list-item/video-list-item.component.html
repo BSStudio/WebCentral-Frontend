@@ -1,0 +1,23 @@
+<mat-card fxFlex="90%" fxFlex.gt-xs="0 1 320px" class="card-picture">
+    <a class="video-link" routerLink="{{video.id}}">
+        <mat-card-title fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="{(isLoggedIn): '90%' : '100%'}" class="title">{{video.title}}</div>
+            
+            <ng-container *ngIf="isLoggedIn">
+                <mat-icon fxFlex="10%" *ngIf="video.type=='public'">public</mat-icon>
+                <mat-icon fxFlex="10%" *ngIf="video.type=='private'">lock</mat-icon>
+                <mat-icon fxFlex="10%" *ngIf="video.type=='draft'">insert_drive_file</mat-icon>
+            </ng-container>
+        </mat-card-title>
+
+        <img mat-card-image src="{{video.snapshotUrl}}">
+
+        <mat-card-footer fxLayout="row" fxLayoutAlign="end end">
+            <mat-chip-list fxLayout="row" fxLayoutAlign="end end">
+                <mat-chip color="primary" selected>Schönherz</mat-chip>
+                <mat-chip color="primary" selected>Közélet</mat-chip>
+                <mat-chip color="primary" selected>Bulika</mat-chip>
+            </mat-chip-list>
+        </mat-card-footer>
+    </a>
+</mat-card>

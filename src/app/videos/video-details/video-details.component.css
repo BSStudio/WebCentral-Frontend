@@ -1,0 +1,18 @@
+.video-details-container {
+    z-index: 0;
+    height: fit-content;
+}
+
+.video-details-container .scrollable {
+    overflow-y: auto;
+}
+
+.video-details-content {
+    padding-top: 25px;
+}
+
+.video-details-sidenav {
+    height: 100%;
+    padding: 25px;
+    background-color: #eee;
+}

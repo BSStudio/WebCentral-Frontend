@@ -1,0 +1,99 @@
+.mat-drawer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 50px;
+    color: #fff;
+}
+
+.mat-toolbar {
+    background-color: #005BAA;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.mat-toolbar .logo {
+    box-sizing: border-box;
+    background-color: #bbb;
+    margin-left: -16px;
+    padding: 5px;
+    height: 50px;
+}
+
+.mat-toolbar .logo-triangle {
+    width: 0px;
+    height: 0px;
+    border-left:25px solid #bbb; 
+    border-top:25px solid #005BAA; 
+    border-bottom:25px solid #005BAA; 
+}
+
+.mat-toolbar .mat-button {
+    text-align: center;
+    opacity: .6;
+}
+
+.mat-toolbar .mat-form-field{
+    padding-top: 15px;
+}
+
+.mat-toolbar .search-form{
+    font-size: 12px;
+}
+
+.mat-drawer {
+    min-width: 225px;
+}
+
+.mat-drawer .login-form{
+    margin: 15px 25px;
+}
+
+.mat-drawer .login-form .mat-form-field{
+    max-width: 175px;
+    margin-bottom: -25px;
+}
+
+.mat-drawer .login-form button{
+    max-width: 125px;
+    margin-top: 35px;
+}
+
+.mat-drawer .round {
+    margin:  25px 50px 10px 50px;
+    border-radius: 100%;
+    display: block;
+}
+
+.mat-drawer .text {
+    text-align: center;
+}
+
+.mat-drawer .mat-button {
+    text-align: left;
+}
+
+.mat-drawer button {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+@media (min-width: 0) {
+    .mat-toolbar {
+      min-height: 50px;
+    }
+    .mat-toolbar {
+      height: 50px;
+      max-height: fit-content;
+    }
+}

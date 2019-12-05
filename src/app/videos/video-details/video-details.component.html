@@ -1,0 +1,14 @@
+<div class="video-details-container" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="0">
+    <div class="video-details-content" fxFlex="70%" fxFlexFill fxLayout="row wrap" fxLayoutAlign="space-evenly">
+        <video fxFlex="90%" controls poster="https://v.bsstudio.hu/bss_vagott_web_16a9_HD/keyframe/20190913_vartura_dori_lq.png">
+            <source src="https://v.bsstudio.hu/bss_vagott_web_16a9_HD/high_quality/20190913_vartura_dori_hq_HD.mp4" type="video/mp4">
+            A böngésződ nem támogatja a HTML5 video tag-et!
+        </video>
+        <h1 class="mat-h1" fxFlex="80%">The Details of Article with an ID: {{id}}</h1>
+    </div>
+    <div class="video-details-sidenav" fxFlex="30%">
+        <div class="related-videos-list scrollable" fxLayout="column" fxLayoutGap="20px">
+            <app-related-list-item *ngFor="let video of relatedVideos" [video]="video" ></app-related-list-item>
+        </div>
+    </div>
+</div>

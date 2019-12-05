@@ -1,0 +1,55 @@
+.mat-card {
+    margin: 15px 0;
+    padding-bottom: 0px;
+}
+
+.mat-card:hover {
+    box-shadow: 0 0 5px 5px rgba(0,0,0,.1), 0 8px 8px 0 rgba(0,0,0,.14), 0 8px 8px 0 rgba(0,0,0,.12) !important;
+    transform: translate3d(0,0,0);
+    transition: #fff .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+}
+
+.mat-card .video-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mat-card .mat-card-title{
+    height: 25px;
+    z-index: 10;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0 0 15px #000;
+    position: relative;
+}
+
+.mat-card .mat-card-title .title {
+    font-size: 16px;
+    color: white;
+}
+
+.mat-card .mat-card-title .mat-icon {
+    padding-left: 8px;
+    font-size: 22px;
+    color: white;
+}
+
+.mat-card .mat-card-image {
+    margin-bottom: -5px;
+    margin-top: -50px;
+    border-radius: 5px 5px 5px 5px;
+    z-index: 0;
+}
+
+.mat-card .mat-card-footer {
+    height: 15px;
+    z-index: 10;
+    position: relative;
+    bottom: 15px;
+    padding: 5px;
+}
+
+.mat-card .mat-chip{
+    font-size: 10px;
+    min-height: 15px;
+    padding: 3px 6px;
+    background-color: #005BAA;
+}
