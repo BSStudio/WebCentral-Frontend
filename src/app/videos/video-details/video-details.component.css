@@ -8,11 +8,21 @@
 }
 
 .video-details-content {
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.video-details-content .title {
     padding-top: 25px;
+}
+
+.video-details-content .description {
+    text-align: justify;
 }
 
 .video-details-sidenav {
     height: 100%;
     padding: 25px;
-    background-color: #eee;
+    background-color: #444;
 }

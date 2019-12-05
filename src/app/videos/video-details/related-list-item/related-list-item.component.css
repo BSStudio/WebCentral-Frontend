@@ -1,3 +1,7 @@
 img {
     width: 150px;
 }
+
+.related-video-item div {
+    padding-left: 10px;
+}
