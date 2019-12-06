@@ -9,6 +9,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule, MatIconModule, MatSidenavModule, MatTabsModule, MatChipsModule } from '@angular/material';
 import { VideoDetailsComponent } from './video-details/video-details.component';
 import { RelatedListItemComponent } from './video-details/related-list-item/related-list-item.component';
+import { VideoService } from './video.service';
+import { Video } from './video';
 
 @NgModule({
   declarations: [VideoListComponent, VideoListItemComponent, VideoDetailsComponent, RelatedListItemComponent],
@@ -26,4 +28,10 @@ import { RelatedListItemComponent } from './video-details/related-list-item/rela
     MatChipsModule
   ]
 })
-export class VideosModule { }
+export class VideosModule {
+
+  constructor(){}
+
+  ngOnInit() {
+  }
+ }

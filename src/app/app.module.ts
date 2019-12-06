@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BaseComponent } from './base/base.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { 
@@ -31,6 +32,7 @@ import {
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    HttpClientModule,
 
     // Material
     MatButtonModule,
