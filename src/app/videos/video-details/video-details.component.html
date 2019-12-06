@@ -1,16 +1,19 @@
-<div class="video-details-container" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="0">
+<div class="video-details-container" fxLayout.gt-xs="row wrap" *ngIf="video" fxLayout="column" fxLayoutGap="0">
     <div class="video-details-content" fxFlex="70%" fxFlexFill fxLayout="row wrap" fxLayoutAlign="space-evenly">
-        <video fxFlex="100%" controls poster="https://v.bsstudio.hu/bss_vagott_web_16a9_HD/keyframe/20190913_vartura_dori_lq.png">
-            <source src="https://v.bsstudio.hu/bss_vagott_web_16a9_HD/high_quality/20190913_vartura_dori_hq_HD.mp4" type="video/mp4">
+        <video fxFlex="100%" controls poster="{{video.imageLocation}}">
+            <source src="{{video.videoLocation}}" type="video/mp4">
             A böngésződ nem támogatja a HTML5 video tag-et!
         </video>
-        <h1 class="mat-h1 title" fxFlex.gt-xs="80%">The Details of Article with an ID: {{id}}</h1>
+        <h1 class="mat-h1 title" fxFlex.gt-xs="80%">{{video.longName}}</h1>
         <p fxFlex.gt-xs="20%">16 like 125 view 2019.12.05</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac ut consequat semper viverra nam libero justo laoreet sit. Vitae congue mauris rhoncus aenean vel elit. Netus et malesuada fames ac turpis. Lacus laoreet non curabitur gravida arcu ac tortor dignissim. Quis lectus nulla at volutpat. Cursus metus aliquam eleifend mi. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Amet consectetur adipiscing elit duis. Sed euismod nisi porta lorem mollis aliquam. Imperdiet dui accumsan sit amet nulla facilisi. Neque viverra justo nec ultrices dui sapien eget mi proin. Pretium quam vulputate dignissim suspendisse in est ante in nibh.</p>
+        <p class="description">{{video.description}}</p>
     </div>
-    <div class="video-details-sidenav" fxFlex="30%">
+    <div class="video-details-sidenav" *ngIf="relatedVideos" fxFlex.gt-xs="30%">
         <div class="related-videos-list scrollable" fxLayout="column" fxLayoutGap="20px">
             <app-related-list-item *ngFor="let video of relatedVideos" [video]="video" ></app-related-list-item>
         </div>
     </div>
+</div>
+<div class="spinner-container" *ngIf="!video || !relatedVideos">
+  <mat-spinner [mode]="'indeterminate'" [diameter]='100' [strokeWidth]='5'></mat-spinner>
 </div>

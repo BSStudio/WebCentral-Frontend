@@ -1,77 +1,62 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Video } from '.././video-modells/video';
+import { VideoService } from '../video.service';
+import { BaseComponent } from 'src/app/base/base.component';
 
 @Component({
   selector: 'app-video-details',
   templateUrl: './video-details.component.html',
   styleUrls: ['./video-details.component.css']
 })
-export class VideoDetailsComponent implements OnInit {
+export class VideoDetailsComponent extends BaseComponent implements OnInit {
   id: any;
+  video: Video;
+  relatedVideos: Video[];
 
-  relatedVideos = [
-    
-    {
-      id: 1,
-      type: 'public',
-      title: 'Gólya7 2019 - Vártúra',
-      snapshotUrl: 'https://v.bsstudio.hu/bss_vagott_web_16a9_HD/keyframe/20190913_vartura_dori_lq.png'
-    },
-    {
-      id: 2,
-      type: 'public',
-      title: 'Ökörsütés 2019',
-      snapshotUrl: 'https://v.bsstudio.hu/bss_vagott_web_16a9_HD/keyframe/20190915_okorsutes_lq.png'
-    },
-    {
-      id: 3,
-      type: 'private',
-      title: 'I. Simonyi Félévzáró és Főzőverseny',
-      snapshotUrl: 'https://v.bsstudio.hu/bss_vagott_web_16a9_HD/keyframe/20190529_fozoverseny_final_lq.png'
-    },
-    {
-      id: 4,
-      type: 'draft',
-      title: 'Abstract design loooo ooo ooo ooooooooooooo',
-      snapshotUrl: 'https://via.placeholder.com/320x180'
-    },
-    {
-      id: 5,
-      type: 'private',
-      title: 'Tech',
-      snapshotUrl: 'https://via.placeholder.com/320x180'
-    },
-    {
-      id: 6,
-      type: 'public',
-      title: 'Placeholder',
-      snapshotUrl: 'https://via.placeholder.com/320x180'
-    },
-    {
-      id: 6,
-      type: 'public',
-      title: 'Placeholder',
-      snapshotUrl: 'https://via.placeholder.com/320x180'
-    },
-    {
-      id: 6,
-      type: 'public',
-      title: 'Placeholder',
-      snapshotUrl: 'https://via.placeholder.com/320x180'
-    },
-    {
-      id: 6,
-      type: 'public',
-      title: 'Placeholder',
-      snapshotUrl: 'https://via.placeholder.com/320x180'
-    }
-  ]
-
-  constructor(private activatedRoute: ActivatedRoute) {
-    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+  constructor(
+    private router: Router,
+    private videoService: VideoService,
+    private route: ActivatedRoute
+  ) {
+    super();
   }
 
   ngOnInit() {
+    this.route.params.subscribe(
+      params => {
+        this.id = this.route.snapshot.paramMap.get('id');
+        this.video = undefined;
+        this.relatedVideos = undefined;
+        this.getVideo();
+        this.getRelatedVideos();
+      }
+    )
+  }
+
+  getVideo() {
+    this.videoService.getVideoById(this.id)
+      .subscribe(
+        data => {
+          this.video = data.video;
+        },
+        err => console.error(err),
+        () => console.log('received' + this.video)
+      );
+  }
+
+  getRelatedVideos() {
+    this.videoService.getRelatedVideos(this.id)
+      .subscribe(
+        data => {
+          this.relatedVideos = [];
+          for (let i = 0; i < data.videos.length; i++) {
+            this.relatedVideos[i] = data.videos[i].video;
+          }
+        },
+        err => console.error(err),
+        () => console.log('received' + this.relatedVideos)
+      );
   }
 
 }

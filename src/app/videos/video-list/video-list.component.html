@@ -1,26 +1,17 @@
+<div class="spinner-container" *ngIf="!videos || !videos[0] || !types">
+  <mat-spinner [mode]="'indeterminate'" [diameter]='100' [strokeWidth]='5'></mat-spinner>
+</div>
 
-<mat-tab-group>
-    <mat-tab id="mat-tab-label" label="Videók">
-        <div class="video-list" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
-            <app-video-list-item *ngFor="let video of videos" [video]="video" ></app-video-list-item>
-        </div>
-    </mat-tab>
-    <mat-tab label="Közvetítések">
-        <div class="video-list" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
-            <app-video-list-item *ngFor="let video of videos" [video]="video" ></app-video-list-item>
-        </div>
-    </mat-tab>
-    <mat-tab label="Műsorok">
-        <div class="video-list" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
-            <app-video-list-item *ngFor="let video of videos" [video]="video" ></app-video-list-item>
-        </div>
-    </mat-tab>
-    <mat-tab label="Archivum">
-        <div class="video-list" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
-            <app-video-list-item *ngFor="let video of videos" [video]="video" ></app-video-list-item>
-        </div>
-    </mat-tab>
-    <mat-tab label="Részletes kereső">
-        <p>Kereső felület</p>
-    </mat-tab>
+<mat-tab-group [selectedIndex]="selectedIndex">
+
+    <div *ngFor="let type of types; index as i">
+      <mat-tab id="mat-tab-label" label="{{type.longName}}">
+          <div class="video-list" *ngIf="videos && videos[i]" fxLayout.gt-xs="row wrap" fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="center">
+              <app-video-list-item *ngFor="let video of videos[i]" [video]="video" ></app-video-list-item>
+          </div>
+      </mat-tab>
+      <mat-tab *ngIf="i == (types.length - 1)" label="Részletes kereső">
+          <p>Kereső felület</p>
+      </mat-tab>
+    </div>
 </mat-tab-group>

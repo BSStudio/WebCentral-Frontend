@@ -1,28 +1,33 @@
 .video-details-container {
-    z-index: 0;
-    height: fit-content;
+  z-index: 0;
+  height: fit-content;
+  color: #bbb;
 }
 
 .video-details-container .scrollable {
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 .video-details-content {
-    padding-top: 2%;
-    padding-left: 2%;
-    padding-right: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.video-details-content video {
+  min-height: 56.25%;
 }
 
 .video-details-content .title {
-    padding-top: 25px;
+  padding-top: 25px;
 }
 
 .video-details-content .description {
-    text-align: justify;
+  text-align: justify;
 }
 
 .video-details-sidenav {
-    height: 100%;
-    padding: 25px;
-    background-color: #444;
+  height: 100%;
+  padding: 25px;
+  background-color: #444;
+  box-shadow: 0px 4px 8px 0px #222;
 }

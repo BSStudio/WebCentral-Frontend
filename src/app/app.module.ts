@@ -8,18 +8,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { 
+import {
   MatButtonModule,
   MatCardModule,
+  MatDialogModule,
   MatDividerModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
-  MatToolbarModule,
+  MatProgressSpinnerModule,
   MatSidenavModule,
   MatTabsModule,
+  MatToolbarModule,
   MatChipsModule
 } from '@angular/material';
+import { VideoService } from './videos/video.service';
 
 
 @NgModule({
@@ -37,16 +40,20 @@ import {
     // Material
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
     MatDividerModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatProgressSpinnerModule,
+    MatSidenavModule,
     MatTabsModule,
     MatToolbarModule,
-    MatSidenavModule,
     MatChipsModule
   ],
-  providers: [],
+  providers: [
+    VideoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -47,9 +47,14 @@
     padding: 5px;
 }
 
+.mat-chip-list{
+  padding: 0 3px;
+}
+
 .mat-card .mat-chip{
     font-size: 10px;
     min-height: 15px;
     padding: 3px 6px;
+    margin-right: 1px;
     background-color: #005BAA;
 }

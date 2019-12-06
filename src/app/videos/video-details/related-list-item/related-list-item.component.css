@@ -5,3 +5,21 @@ img {
 .related-video-item div {
     padding-left: 10px;
 }
+
+a.related-video-item {
+  text-decoration: none;
+  color: #bbb;
+}
+
+.mat-chip-list{
+  padding: 0 3px;
+}
+
+
+.related-video-item .mat-chip{
+  font-size: 10px;
+  min-height: 15px;
+  padding: 3px 6px;
+  margin-right: 1px;
+  background-color: #005BAA;
+}

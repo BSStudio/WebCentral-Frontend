@@ -1,4 +1,9 @@
-<div class="related-video-item" fxLayout="row">
-    <img fxFlex="40%" src="{{video.snapshotUrl}}">
-    <div fxFlex="60%">{{video.title}}</div>
-</div>
+<a class="related-video-item" fxLayout="row" routerLink="/videos/{{video.id}}">
+    <img fxFlex="50%" src="{{video.imageLocation}}">
+    <div fxFlex="50%">
+      {{video.longName}}
+      <mat-chip-list fxLayout="row" fxLayoutAlign="start end">
+          <mat-chip color="primary" *ngFor="let tag of video.videoTags" selected>{{tag.longName}}</mat-chip>
+      </mat-chip-list>
+    </div>
+</a>
