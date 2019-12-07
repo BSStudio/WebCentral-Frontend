@@ -11,16 +11,21 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatButtonModule,
   MatCardModule,
+  MatCheckboxModule,
   MatDialogModule,
   MatDividerModule,
+  MatExpansionModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
+  MatListModule,
   MatProgressSpinnerModule,
+  MatSelectModule,
   MatSidenavModule,
   MatTabsModule,
   MatToolbarModule,
-  MatChipsModule
+  MatChipsModule,
+  MatMenuModule
 } from '@angular/material';
 import { VideoService } from './videos/video.service';
 
@@ -40,16 +45,21 @@ import { VideoService } from './videos/video.service';
     // Material
     MatButtonModule,
     MatCardModule,
+    MatCheckboxModule,
     MatDialogModule,
     MatDividerModule,
+    MatExpansionModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatListModule,
     MatProgressSpinnerModule,
+    MatSelectModule,
     MatSidenavModule,
     MatTabsModule,
     MatToolbarModule,
-    MatChipsModule
+    MatChipsModule,
+    MatMenuModule
   ],
   providers: [
     VideoService

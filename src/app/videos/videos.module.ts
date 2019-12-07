@@ -6,11 +6,9 @@ import { VideoListComponent } from './video-list/video-list.component';
 import { VideoListItemComponent } from './video-list/video-list-item/video-list-item.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatCardModule, MatIconModule, MatSidenavModule, MatTabsModule, MatChipsModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatCardModule, MatCheckboxModule, MatIconModule, MatSidenavModule, MatTabsModule, MatChipsModule, MatProgressSpinnerModule } from '@angular/material';
 import { VideoDetailsComponent } from './video-details/video-details.component';
 import { RelatedListItemComponent } from './video-details/related-list-item/related-list-item.component';
-import { VideoService } from './video.service';
-import { Video } from './video-modells/video';
 
 @NgModule({
   declarations: [VideoListComponent, VideoListItemComponent, VideoDetailsComponent, RelatedListItemComponent],
@@ -22,6 +20,7 @@ import { Video } from './video-modells/video';
 
     // Material
     MatCardModule,
+    MatCheckboxModule,
     MatIconModule,
     MatSidenavModule,
     MatTabsModule,
@@ -31,8 +30,6 @@ import { Video } from './video-modells/video';
 })
 export class VideosModule {
 
-  constructor(){}
+  constructor() { }
 
-  ngOnInit() {
-  }
- }
+}

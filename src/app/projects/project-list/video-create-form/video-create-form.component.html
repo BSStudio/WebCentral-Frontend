@@ -1,0 +1,46 @@
+<form fxLayout="column" (ngSubmit)="onSubmit()" #videoForm="ngForm">
+  <div fxLayout="raw" fxLayoutAlign="space-between center">
+    <mat-form-field fxFlex="70%">
+      <mat-select matInput [(ngModel)]="newVideo.videoType" name="videoType" placeholder="Típus" [disabled]="!videoTypes" required>
+        <mat-option *ngFor="let type of videoTypes" [value]="type.canonicalName">
+          {{type.longName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div fxFlex="20%">
+      <mat-checkbox
+            [(ngModel)]="newVideo.visible"
+            name="visible"
+            labelPosition="before"
+            color="primary">
+        Publikus
+      </mat-checkbox>
+    </div>
+  </div>
+  <mat-form-field>
+    <input matInput [(ngModel)]="newVideo.longName" name="longName" placeholder="Cím" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="newVideo.canonicalName" name="canonicalName" placeholder="Kanonikus cím" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="newVideo.projectName" name="projectName" placeholder="Project neve" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="newVideo.imageLocation" name="imageLocation" type="url" placeholder="Kép url" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="newVideo.videoLocation" name="videoLocation" type="url" placeholder="Videó url" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select matInput [(ngModel)]="newVideo.videoTags" name="videoTags" placeholder="Tagek" [disabled]="!videoTags" multiple>
+      <mat-option *ngFor="let tag of videoTags" [value]="tag.canonicalName">
+        {{tag.longName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="newVideo.description" name="description" placeholder="Leírás"></textarea>
+  </mat-form-field>
+  <button mat-button [disabled]="!videoForm.form.valid">Létehozés</button>
+</form>

@@ -1,0 +1,49 @@
+.container{
+  height: 100%;
+  padding: 20px;
+}
+
+.container .mat-expansion-panel{
+  background: #eee !important;
+}
+
+.container .mat-subheader{
+  padding: 0px 8px;
+}
+
+.container .mat-subheader h3{
+  margin: 0;
+  font-weight: normal;
+}
+
+.container .mat-spinner{
+  position: inherit;
+  margin-right: 10px;
+}
+
+.container .list-item-container{
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+.container .list-item-container{
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+.container .list-item-container h4{
+  font-weight: normal;
+  margin: 0;
+}
+
+.container .list-item-container p{
+  margin: 0;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label{
+  color: #005BAA;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple{
+  color: #005BAA;
+}

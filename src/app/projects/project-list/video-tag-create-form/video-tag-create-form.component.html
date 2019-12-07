@@ -1,0 +1,12 @@
+<form fxLayout="column" (ngSubmit)="onSubmit()" #videoTagForm="ngForm">
+  <mat-form-field>
+    <input matInput [(ngModel)]="newTag.longName" name="longName" placeholder="Név" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="newTag.canonicalName" name="canonicalName" placeholder="Kanonikus név" required>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="newTag.description" name="description" placeholder="Leírás"></textarea>
+  </mat-form-field>
+  <button mat-button [disabled]="!videoTagForm.form.valid">Létehozés</button>
+</form>

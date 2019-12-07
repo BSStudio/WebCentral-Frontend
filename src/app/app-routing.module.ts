@@ -4,21 +4,25 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'videos',
-    loadChildren:'./videos/videos.module#VideosModule'
+    path: 'videos',
+    loadChildren: './videos/videos.module#VideosModule'
   },
   {
-    path:'profiles',
-    loadChildren:'./profiles/profiles.module#ProfilesModule'
+    path: 'profiles',
+    loadChildren: './profiles/profiles.module#ProfilesModule'
   },
   {
-    path:'courses',
-    loadChildren:'./courses/courses.module#CoursesModule'
+    path: 'courses',
+    loadChildren: './courses/courses.module#CoursesModule'
   },
   {
-    path:'',
-    redirectTo:'',
-    pathMatch:'full'
+    path: 'projects',
+    loadChildren: './projects/projects.module#ProjectsModule'
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 

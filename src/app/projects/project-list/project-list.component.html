@@ -1,0 +1,92 @@
+<mat-tab-group>
+  <mat-tab label="Videók">
+    <div fxLayout="row wrap" fxLayoutAlign="space-around start" class="container">
+      <mat-card fxFlex.gt-xs="60%" fxFlex="90%">
+        <mat-card-content>
+          <mat-list>
+            <div mat-subheader fxLayout="row wrap" fxLayoutAlign="space-between center">
+              <h3>Feltöltött videók</h3>
+              <mat-spinner *ngIf="!videos || loading" [mode]="'indeterminate'" [diameter]='20' [strokeWidth]='3'>
+              </mat-spinner>
+            </div>
+            <div *ngIf="!loading">
+              <mat-list-item *ngFor="let video of videos">
+                <div class="list-item-container" fxLayout="row wrap" fxLayoutAlign="start center">
+                  <div fxFlex.gt-md="10%" fxHide.lt-md="true" fxLayoutAlign="center center">
+                    <mat-icon *ngIf="video.archived" mat-list-icon>insert_drive_file</mat-icon>
+                    <mat-icon *ngIf="video.visible" mat-list-icon>public</mat-icon>
+                    <mat-icon *ngIf="!video.visible" mat-list-icon>lock</mat-icon>
+                    <mat-icon *ngIf="video.archived" mat-list-icon>delete</mat-icon>
+                  </div>
+                  <div fxFlex.gt-md="50%" fxFlex.lt-md="100%">
+                    <h4 mat-line>{{video.longName}}</h4>
+                    <p mat-line class="video-type">{{video.videoType}}</p>
+                  </div>
+                  <div fxFlex.gt-md="35%" fxFlex.lt-md="95%">
+                    <p mat-line>{{video.projectName}}</p>
+                  </div>
+                  <div fxFlex="5%">
+                    <a routerLink="/videos/{{video.id}}">
+                      <i class="material-icons">
+                        keyboard_arrow_right
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </mat-list-item>
+            </div>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- FORM -->
+      <mat-accordion fxFlex.gt-xs="30%" fxFlex="90%">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Videó létrehozása
+            </mat-panel-title>
+            <mat-spinner *ngIf="!videoTypes || loading" [mode]="'indeterminate'" [diameter]='20' [strokeWidth]='3'></mat-spinner>
+          </mat-expansion-panel-header>
+          <app-video-create-form [videos]=(videos) [videoTypes]=(videoTypes) [videoTags]=(videoTags) [reload]="reloadCallback"></app-video-create-form>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Videó tag létrehozása
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-video-tag-create-form [reload]="reloadCallback"></app-video-tag-create-form>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Videó típus létrehozása
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <form fxLayout="column">
+            <mat-form-field>
+              <input matInput placeholder="Név" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Kanonikus név" required>
+            </mat-form-field>
+            <mat-form-field>
+              <textarea matInput placeholder="Leírás"></textarea>
+            </mat-form-field>
+            <button mat-button>Létehozés</button>
+          </form>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Projektek"></mat-tab>
+  <mat-tab label="Adások"></mat-tab>
+  <mat-tab label="Felhasználók"></mat-tab>
+  <mat-tab label="Statisztikák"></mat-tab>
+</mat-tab-group>
