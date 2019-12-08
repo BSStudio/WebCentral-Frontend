@@ -14,7 +14,7 @@ import { VideoTagRequest } from './video-modells/video-tag-request';
 @Injectable()
 export class VideoService {
   private http: HttpClient;
-  private baseUrl = 'http://localhost:8080/wc/api';
+  private baseUrl = 'http://backend.webcentral.veresspataki.com/wc/api';
 
   constructor(httpClient: HttpClient) {
     this.http = httpClient;

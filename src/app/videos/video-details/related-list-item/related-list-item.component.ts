@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Video } from '../../video-modells/video';
 
 @Component({
   selector: 'app-related-list-item',
@@ -6,18 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./related-list-item.component.css']
 })
 export class RelatedListItemComponent implements OnInit {
-  @Input() video: RelatedVideo;
+  @Input() video: Video;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-}
-
-export interface RelatedVideo{
-  id: any;
-  title: string;
-  type: string;
-  snapshotUrl: string;
 }

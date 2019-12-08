@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { BaseComponent } from 'src/app/base/base.component';
+import { Video } from '../../video-modells/video';
 
 @Component({
   selector: 'app-video-list-item',
@@ -8,7 +9,7 @@ import { BaseComponent } from 'src/app/base/base.component';
   styleUrls: ['./video-list-item.component.css']
 })
 export class VideoListItemComponent extends BaseComponent implements OnInit {
-  @Input() video: VideoItem;
+  @Input() video: Video;
 
   constructor() {
     super();
@@ -17,11 +18,4 @@ export class VideoListItemComponent extends BaseComponent implements OnInit {
   ngOnInit() {
   }
 
-}
-
-export interface VideoItem {
-  id: any;
-  title: string;
-  type: string;
-  snapshotUrl: string;
 }
